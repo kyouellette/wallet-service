@@ -43,9 +43,7 @@ export class WalletService {
       : {
           userId,
         };
-    return await this.transactionRepository.find({
-      where,
-    });
+    return await this.transactionRepository.find({ where: where });
   }
 
   async createTransaction(data: CreateTransactionDTO): Promise<Transaction> {
